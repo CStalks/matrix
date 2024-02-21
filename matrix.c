@@ -36,6 +36,14 @@ void matrixArrayOfArrays(int m, int n){
         }
         printf("\n");
     }
+    printf("\n\n");
+
+     for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            printf("%f\t", arr[j][i]);
+        }
+        printf("\n");
+    }
     printf("\n");
     //free the memory that was allocated and assigned for each of the float pointers
     for(int i = 0; i < m; i++){
@@ -61,10 +69,21 @@ void matrixOneBigArray(int m, int n){
         }
     }
 
-    for(int i = 0; i < m; i++){
+     for(int i = 0; i < m; i++){
         for(int j = 0; j < n; j++){
             printf("%f\t", arr[i][j]);
         }
         printf("\n");
     }
+     printf("\n");
+
+     for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            printf("%f\t", arr[j][i]);
+        }
+        printf("\n");
+    }
+
+    free(arr[0]);
+    free(arr);
 }
